@@ -1,0 +1,91 @@
+/* --- background --- */
+body {
+    background: radial-gradient(circle at 20% 20%, #1b2236, #090b12 70%);
+    color: #e6e6e6;
+    font-family: "Inter", system-ui, sans-serif;
+    min-height: 100vh;
+}
+
+/* centered reading column */
+.container-narrow {
+    max-width: 720px;
+    margin: auto;
+}
+
+/* glass panels */
+.glass {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+}
+
+/* textarea */
+textarea {
+    background: rgba(0,0,0,0.25) !important;
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 14px !important;
+    padding: 18px !important;
+    font-size: 1.05rem !important;
+}
+
+textarea:focus {
+    box-shadow: 0 0 0 2px rgba(140,180,255,0.4) !important;
+}
+
+/* buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #6ea8ff, #a78bfa);
+    border: none;
+    border-radius: 14px;
+    font-weight: 600;
+    padding: 12px 22px;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.15);
+}
+
+/* headings */
+h1, h2 {
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+/* interpretation text */
+.interpretation {
+    line-height: 1.7;
+    font-size: 1.05rem;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+/* image reveal */
+.dream-image {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.dream-image.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* loading spinner */
+.loader {
+    width: 42px;
+    height: 42px;
+    border: 4px solid rgba(255,255,255,0.15);
+    border-top: 4px solid #a78bfa;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 30px auto;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
